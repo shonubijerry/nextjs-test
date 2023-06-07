@@ -15,6 +15,8 @@ You may want to consider:
 - How do we handle incorrect usernames/passwords?
 - What do we do on the /profile page if the token is invalid?
 - CSS/Styling on the pages (particularly important if you're applying from a Frontend Development background)
+- What if a customer is already logged in on the login page?
+- How do we logout?
 
 These considerations are time-permitting - you are not expected to action all of them.
 
