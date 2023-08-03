@@ -27,6 +27,7 @@ const profileStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
     background: theme.palette.primary.dark,
     height: '100%',
+    width: '100%',
     position: 'absolute',
     top: 0,
     left: 0,

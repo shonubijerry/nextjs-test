@@ -22,11 +22,11 @@ export async function GET(request: Request) {
     }
     const auth: any = JSON.parse(request.headers.get('Authorization') || '');
 
-    if (auth.token === '123') {
-      return new Response(JSON.stringify(fakeUser), { status: 200 });
+    if (auth.token !== '123') {
+      return new Response(JSON.stringify({ message: "Unauthorized" }), { status: 401 });
     }
 
-    return new Response(JSON.stringify({ message: "Unauthorized" }), { status: 401 });
+    return new Response(JSON.stringify(fakeUser), { status: 200 });
   } catch (error) {
     return new Response(JSON.stringify({ message: "Bad Request" }), { status: 400 });
   }

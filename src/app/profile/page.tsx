@@ -56,7 +56,7 @@ export default function Page() {
 
       fetchData();
     }
-  }, []);
+  }, [router]);
 
   const handleLogout = async () => {
     // e.preventDefault();
@@ -74,12 +74,11 @@ export default function Page() {
         <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.card}>
             <CardContent>
-              {/* <Avatar className={classes.avatar} alt="User Avatar" src="/path/to/avatar.jpg" /> */}
               <Avatar
                 className={classes.avatar}
                 style={{backgroundColor: stringToColor(user.firstname)}}>
                   {stringAvatar(user.firstname, user.lastname)}
-                </Avatar>
+              </Avatar>
               <Typography variant="h5" component="h2">
                 {user.firstname} {user.lastname}
               </Typography>
