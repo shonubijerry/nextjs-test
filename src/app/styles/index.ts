@@ -17,7 +17,7 @@ const homeStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(1),
   },
   submit: {
-    margin: theme.spacing(3, 0, 2),
+    margin: theme.spacing(3, 0, 2)
   },
 }));
 
@@ -25,7 +25,7 @@ const profileStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     padding: theme.spacing(3),
-    background: theme.palette.primary.dark,
+    background: '#fc5555',
     height: '100%',
     width: '100%',
     position: 'absolute',

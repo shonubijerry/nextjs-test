@@ -1,8 +1,7 @@
 import { User } from "@/app/types";
+import jwt from 'jsonwebtoken';
+
 const f = require('randopeep')
-
-
-
 
 
 export async function GET(request: Request) {
@@ -22,7 +21,7 @@ export async function GET(request: Request) {
     }
     const auth: any = JSON.parse(request.headers.get('Authorization') || '');
 
-    if (auth.token !== '123') {
+    if (jwt.decode(auth?.token) !== '123') {
       return new Response(JSON.stringify({ message: "Unauthorized" }), { status: 401 });
     }
 

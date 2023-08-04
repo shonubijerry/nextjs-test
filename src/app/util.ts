@@ -37,7 +37,7 @@ export const apiPost = async <T>({url, body, config, successMsg, errorMsg}: APIP
 };
 
 export function isAuthenticated(token: string | null) {
-  return token === '123';
+  return !!token;
 }
 
 export function stringToColor(str: string) {

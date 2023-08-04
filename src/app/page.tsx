@@ -10,7 +10,6 @@ import {
   Container,
 } from "@material-ui/core";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
-import secureLocalStorage from "react-secure-storage";
 
 import { apiPost, isAuthenticated } from "./util";
 import { homeStyles } from "./styles";
@@ -25,7 +24,7 @@ export default function Home() {
 
   useEffect(() => {
     if (typeof window !== "undefined" && window.localStorage) {
-      let localToken = secureLocalStorage.getItem("token") as string
+      let localToken = localStorage.getItem("token") as string
       
       tokenRef.current = localToken;
       if (isAuthenticated(tokenRef.current)) {
@@ -48,7 +47,7 @@ export default function Home() {
     // save the token to local storage if no errors
     if (res) {
       if (typeof window !== "undefined" && window.localStorage)
-        secureLocalStorage.setItem("token", res.token);
+        localStorage.setItem("token", res.token);
       tokenRef.current = res.token;
       router.push("/profile");
     }
@@ -98,7 +97,7 @@ export default function Home() {
             type="submit"
             fullWidth
             variant="contained"
-            color="primary"
+            color="secondary"
             className={classes.submit}
           >
             Sign In
