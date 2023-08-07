@@ -27,6 +27,6 @@ export async function GET(request: Request) {
 
     return new Response(JSON.stringify(fakeUser), { status: 200 });
   } catch (error) {
-    return new Response(JSON.stringify({ message: "Bad Request" }), { status: 400 });
+    return new Response(JSON.stringify({ message: "Bad Request" }), { status: 500 });
   }
 }

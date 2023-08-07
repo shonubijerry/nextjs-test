@@ -13,6 +13,6 @@ export async function POST(request: Request) {
 
     return new Response(JSON.stringify({ token: jwt.sign("123", secretKey) }), { status: 200 });
   } catch (error) {
-    return new Response(JSON.stringify({ message: "Bad Request" }), { status: 400 });
+    return new Response(JSON.stringify({ message: "Bad Request" }), { status: 500 });
   }
 }

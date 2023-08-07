@@ -26,7 +26,7 @@ const profileStyles = makeStyles((theme) => ({
     flexGrow: 1,
     padding: theme.spacing(3),
     background: '#fc5555',
-    height: '100%',
+    height: '100vh',
     width: '100%',
     position: 'absolute',
     top: 0,
